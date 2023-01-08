@@ -56,8 +56,9 @@ public class VendaService : IVendaService
             {
                 return false;
             }
-            var venda = await _repository.PostVenda(vendaServiceDTO);
-            return venda;
+
+             var venda = await _repository.PostVenda(vendaServiceDTO);
+             return venda;
         }
         catch (Exception ex)
         {

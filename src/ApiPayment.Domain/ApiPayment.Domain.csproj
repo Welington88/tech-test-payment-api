@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Repositories\" />
+    <None Remove="DTOs\" />
+    <None Remove="Entities\Base\" />
+    <None Remove="Repositories\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Entities\Base\" />
+    <Folder Include="Repositories\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ApiPayment.CC.Dto\ApiPayment.CC.Dto.csproj" />
+  </ItemGroup>
+</Project>

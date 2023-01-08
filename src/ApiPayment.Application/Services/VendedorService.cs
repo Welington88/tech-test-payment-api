@@ -1,8 +1,6 @@
-﻿using System;
-using ApiPayment.Application.Interfaces;
+﻿using ApiPayment.Application.Interfaces;
 using ApiPayment.CC.Dto.DTOs;
 using ApiPayment.CC.Dto.ViewModels;
-using ApiPayment.Domain.DTOs;
 using ApiPayment.Domain.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;

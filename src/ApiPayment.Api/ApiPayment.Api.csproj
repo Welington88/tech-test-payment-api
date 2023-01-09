@@ -4,6 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerComposeProjectPath>../../docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
@@ -36,9 +37,11 @@
     <None Remove="FluentlyHttpClient" />
     <None Remove="Microsoft.OpenApi" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="DataBase\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configurations\" />
+    <Folder Include="DataBase\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApiPayment.CC.Ioc\ApiPayment.CC.Ioc.csproj">

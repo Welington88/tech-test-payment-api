@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  dbsqlite:
+    container_name: sqlite
+    restart: always
+    networks:
+      - payment
+    ports: 
+      - "80:80"
+
+  apipayment.api:
+    container_name: Api.Payment
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:DataSource=./DataBase/api.db;Cache=Shared"
+    depends_on:
+      - dbsqlite
+    links:
+      - dbsqlite
+    networks:
+      - payment
+    ports:
+      - "8080:80"

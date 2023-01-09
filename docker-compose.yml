@@ -1,0 +1,25 @@
+version: '3.4'
+
+services:
+  dbsqlite:
+    image: nginx
+    networks:
+      - payment
+    volumes:
+      - ./DataBase:/usr/share/nginx/html
+      - datapayment:/usr/share/nginx/html
+    
+  apipayment.api:
+    image: ${DOCKER_REGISTRY-}apipayment
+    build:
+      context: .
+      dockerfile: src/ApiPayment.Api/Dockerfile
+    networks:
+      - payment
+
+networks:
+  payment:
+    driver: bridge
+
+volumes:
+  datapayment:

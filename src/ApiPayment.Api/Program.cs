@@ -1,10 +1,7 @@
 using System.Text.Json.Serialization;
 using ApiPayment.Api.Configurations;
 using ApiPayment.Data.Contexts;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Configuration;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);

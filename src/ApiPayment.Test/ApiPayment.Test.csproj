@@ -28,6 +28,7 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="7.0.0" />
+    <PackageReference Include="AutoFixture" Version="4.17.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +44,7 @@
     <None Remove="Microsoft.Extensions.Configuration.EnvironmentVariables" />
     <None Remove="appsettings.json" />
     <None Remove="appsettings.Development.json" />
+    <None Remove="AutoFixture" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ApiPayment.Application\ApiPayment.Application.csproj" />
